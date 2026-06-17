@@ -6,6 +6,7 @@ let currentLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY) || "pl";
 const UI_TRANSLATIONS = {
   "Analiza ryzyka": "Risk analysis",
   "Analiza ryzyka CRA / 62443": "CRA / 62443 risk analysis",
+  "CRA Risk Workbench Community Edition": "CRA Risk Workbench Community Edition",
   "IEC 62443-3-2": "IEC 62443-3-2",
   "IEC 62443-3-2 + CRA": "IEC 62443-3-2 + CRA",
   "Sekcje aplikacji": "Application sections",
