@@ -13,7 +13,8 @@ const UI_TRANSLATIONS = {
   "Dane projektu": "Project data",
   "Usuń wszystkie dane": "Delete all data",
   "Usuń wszystkie dane tej analizy z przeglądarki": "Delete all data for this analysis from the browser",
-  "Dane są zapisywane tylko lokalnie w tej przeglądarce.": "Data is stored only locally in this browser.",
+  "Stan będzie zapisany automatycznie. Dane są przechowywane wyłącznie lokalnie w Twojej przeglądarce i nie są wysyłane ani zapisywane na serwerze aplikacji.": "State will be saved automatically. Data is stored only locally in your browser and is not sent to or stored on the application server.",
+  "Dane są przechowywane wyłącznie lokalnie w Twojej przeglądarce i nie są wysyłane ani zapisywane na serwerze aplikacji.": "Data is stored only locally in your browser and is not sent to or stored on the application server.",
   "Projekt i SUC": "Project and SUC",
   "Strefy i conduits": "Zones and conduits",
   "Scenariusze ryzyka": "Risk scenarios",
@@ -79,15 +80,16 @@ const UI_TRANSLATIONS = {
   "Decyzja": "Decision",
   "Dodaj scenariusz": "Add scenario",
   "Rejestr scenariuszy": "Scenario register",
-  "CRA: klasyfikacja komponentów TCMS/PIS": "CRA: TCMS/PIS component classification",
+  "CRA: klasyfikacja komponentów produktu": "CRA: product component classification",
   "Rejestr obejmuje komponenty sprzętowe, software, firmware i usługi remote data processing związane z produktem.": "The register covers hardware components, software, firmware and product-related remote data processing services.",
   "Nazwa komponentu": "Component name",
-  "Obszar pojazdu": "Vehicle area",
+  "Obszar systemu": "System area",
   "Typ": "Type",
   "Wersja / wariant": "Version / variant",
   "Dostawca / producent": "Supplier / manufacturer",
   "Rola w CRA": "CRA role",
   "Status zakresu CRA": "CRA scope status",
+  "Zakres CRA": "CRA scope",
   "Support period do": "Support period until",
   "Kategoria CRA": "CRA category",
   "Ocena zgodności": "Conformity assessment",
@@ -105,7 +107,7 @@ const UI_TRANSLATIONS = {
   "Notatki do EU Declaration of Conformity / CE": "Notes for EU Declaration of Conformity / CE",
   "Macierz wymagań CRA": "CRA requirements matrix",
   "CRA: SBOM i komponenty third-party": "CRA: SBOM and third-party components",
-  "Rejestr można prowadzić per produkt, firmware, aplikację PIS, gateway, router lub narzędzie serwisowe.": "The register can be maintained per product, firmware, PIS application, gateway, router or service tool.",
+  "Rejestr można prowadzić per produkt, firmware, aplikację, gateway, router lub narzędzie serwisowe.": "The register can be maintained per product, firmware, application, gateway, router or service tool.",
   "Komponent produktu": "Product component",
   "Nazwa składnika": "Item name",
   "Wersja": "Version",
@@ -201,12 +203,13 @@ const UI_TRANSLATIONS = {
   "zdefiniowane": "defined",
   "decyzja Accept": "Accept decision",
   "ryzyko rezydualne": "residual risk",
+  "zakres produktu": "product scope",
   "Wyczyść bieżący projekt": "Clear the current project",
   "Wczytaj wcześniej zapisany plik JSON": "Load a previously saved JSON file",
   "Zapisz kopię danych projektu": "Save a copy of project data",
   "Wygeneruj raport Word w formacie DOC": "Generate a Word report in DOC format",
-  "np. Analiza ryzyka systemu TCMS": "e.g. TCMS system risk analysis",
-  "np. Stadler": "e.g. Stadler",
+  "np. Analiza ryzyka systemu sterowania": "e.g. control system risk analysis",
+  "np. organizacja / projekt": "e.g. organisation / project",
   "imię, zespół lub rola": "name, team or role",
   "np. 0.1": "e.g. 0.1",
   "Opisz system podlegający rozważaniu, funkcje, użytkowników i zależności operacyjne.": "Describe the system under consideration, functions, users and operational dependencies.",
@@ -225,14 +228,14 @@ const UI_TRANSLATIONS = {
   "Zabezpieczenia już wdrożone lub zakontraktowane.": "Controls already implemented or contracted.",
   "Działania potrzebne, gdy ryzyko przekracza próg tolerowany.": "Actions needed when risk exceeds the tolerable threshold.",
   "rola lub osoba": "role or person",
-  "np. PIS Controller, TCMS Gateway": "e.g. PIS Controller, TCMS Gateway",
+  "np. kontroler, gateway, aplikacja HMI": "e.g. controller, gateway, HMI application",
   "wersja HW/SW/FW": "HW/SW/FW version",
   "nazwa dostawcy": "supplier name",
   "email / rola": "email / role",
-  "Funkcja w pojeździe, tryby pracy, przewidywane użycie.": "Vehicle function, operating modes, intended use.",
+  "Funkcja systemu, tryby pracy, przewidywane użycie.": "System function, operating modes, intended use.",
   "Ethernet, MVB/WTB, CAN, Wi-Fi, LTE/5G, USB, port diagnostyczny, API.": "Ethernet, MVB/WTB, CAN, Wi-Fi, LTE/5G, USB, diagnostic port, API.",
   "Dlaczego komponent jest albo nie jest w zakresie CRA, kategoria i procedura oceny.": "Why the component is or is not in CRA scope, category and assessment procedure.",
-  "np. IEC 62443-4-1, IEC 62443-4-2, IEC 62443-3-3, EN 50701, EN 50159, normy zharmonizowane CRA gdy dostępne.": "e.g. IEC 62443-4-1, IEC 62443-4-2, IEC 62443-3-3, EN 50701, EN 50159, CRA harmonised standards when available.",
+  "np. IEC 62443-4-1, IEC 62443-4-2, IEC 62443-3-3, ISO/IEC 27001, normy zharmonizowane CRA gdy dostępne.": "e.g. IEC 62443-4-1, IEC 62443-4-2, IEC 62443-3-3, ISO/IEC 27001, CRA harmonised standards when available.",
   "Wymagania dla integratora/operatora: konfiguracja, konta, aktualizacje, logi, backup, remote access, wyłączenia funkcji.": "Requirements for the integrator/operator: configuration, accounts, updates, logs, backup, remote access, disabled functions.",
   "Kanał zgłoszeń, triage, SLA, publikacja advisory, poprawki, backporty, komunikacja z klientami.": "Reporting channel, triage, SLA, advisory publication, fixes, backports, customer communication.",
   "Zakres deklaracji, warianty produktu, wyłączenia, dokumenty techniczne, status notified body.": "Declaration scope, product variants, exclusions, technical documents, notified body status.",
@@ -240,9 +243,9 @@ const UI_TRANSLATIONS = {
   "np. 3.0.13": "e.g. 3.0.13",
   "np. Apache-2.0, GPL-2.0": "e.g. Apache-2.0, GPL-2.0",
   "repo, package manager, dostawca": "repo, package manager, supplier",
-  "CVE, kompensacje, powód zamrożenia wersji, ograniczenia środowiska kolejowego.": "CVE, compensating controls, reason for version pinning, railway environment constraints.",
+  "CVE, kompensacje, powód zamrożenia wersji, ograniczenia środowiska operacyjnego.": "CVE, compensating controls, reason for version pinning, operational environment constraints.",
   "CVE, advisory, ticket": "CVE, advisory, ticket",
-  "Wpływ na produkt, pojazd, operatora, pasażerów, dostępność, integralność lub poufność.": "Impact on the product, vehicle, operator, passengers, availability, integrity or confidentiality.",
+  "Wpływ na produkt, użytkowników, operatora, dostępność, integralność lub poufność.": "Impact on the product, users, operator, availability, integrity or confidentiality.",
   "Działania, obejścia, poprawka, advisory, komunikacja z klientem, CSIRT/ENISA.": "Actions, workarounds, fix, advisory, customer communication, CSIRT/ENISA.",
   "Środek techniczny lub procesowy, który realizuje wymaganie.": "Technical or process control that fulfils the requirement.",
   "Analiza, test penetracyjny, test konfiguracji, review, skan CVE, test aktualizacji.": "Analysis, penetration test, configuration test, review, CVE scan, update test.",
@@ -274,15 +277,16 @@ const UI_TRANSLATIONS = {
   "Wyeksportowano JSON.": "JSON exported.",
   "Wygenerowano dokument DOC.": "DOC document generated.",
   "Zapisano lokalnie": "Saved locally",
-  "Stan będzie zapisany automatycznie.": "State will be saved automatically.",
+  "Ostatni zapis lokalny": "Last local save",
   "Ostatni zapis": "Last save",
   "Nieokreślony": "Unspecified"
   ,
-  "Informacja pasażerska": "Passenger information",
-  "Sieć pokładowa": "On-board network",
-  "Remote service / train-to-ground": "Remote service / train-to-ground",
+  "System sterowania": "Control system",
+  "HMI / aplikacja użytkownika": "HMI / user application",
+  "Sieć systemowa": "System network",
+  "Remote service / external connectivity": "Remote service / external connectivity",
   "Utrzymanie / diagnostyka": "Maintenance / diagnostics",
-  "Passenger Wi-Fi / usługi pasażerskie": "Passenger Wi-Fi / passenger services",
+  "Usługi użytkownika": "User services",
   "Inny": "Other",
   "Urządzenie sieciowe": "Network device",
   "Narzędzie serwisowe": "Service tool",
@@ -404,7 +408,7 @@ const UI_TRANSLATIONS = {
   "Proces wspiera terminy 24h/72h, final report oraz komunikację przez właściwe kanały CRA.": "The process supports 24h/72h timelines, final reports and communication through the relevant CRA channels.",
   "Podziel SUC na strefy i połączenia, rozdziel aktywa biznesowe, IACS, safety, bezprzewodowe, tymczasowe i zewnętrzne.": "Partition the SUC into zones and connections, separating business, IACS, safety, wireless, temporary and external assets.",
   "Zidentyfikuj zagrożenia, podatności, wpływ, prawdopodobieństwo, SL-T, istniejące zabezpieczenia i ryzyko rezydualne.": "Identify threats, vulnerabilities, impact, likelihood, SL-T, existing controls and residual risk.",
-  "Sklasyfikuj komponenty TCMS/PIS jako produkty z elementami cyfrowymi, określ rolę operatora, kategorię CRA, support period i procedurę oceny zgodności.": "Classify TCMS/PIS components as products with digital elements and define the operator role, CRA category, support period and conformity assessment procedure.",
+  "Sklasyfikuj komponenty produktu jako produkty z elementami cyfrowymi, określ rolę operatora, kategorię CRA, support period i procedurę oceny zgodności.": "Classify product components as products with digital elements and define the operator role, CRA category, support period and conformity assessment procedure.",
   "Zmapuj wymagania CRA Annex I na komponenty, ryzyka, środki techniczne i dowody zgodności.": "Map CRA Annex I requirements to components, risks, technical measures and conformity evidence.",
   "Zbierz komponenty software, firmware, biblioteki open-source i third-party wraz z wersją, licencją, CVE i statusem aktualizacji.": "Collect software, firmware, open-source and third-party components with version, licence, CVE and update status.",
   "Prowadź rejestr podatności i incydentów pod CRA z terminami 24h/72h, statusem poprawki i komunikacją.": "Maintain a CRA vulnerability and incident register with 24h/72h deadlines, patch status and communication.",
@@ -419,7 +423,7 @@ const UI_TRANSLATIONS = {
   "Profil atakujących, dostępne wektory, ekspozycja zewnętrzna, historia incydentów.": "Threat actor profile, available vectors, external exposure and incident history.",
   "Polityki dostępu, zdalnego serwisu, haseł, kopii zapasowych, patchowania, logowania.": "Policies for access, remote service, passwords, backups, patching and logging.",
   "Kryteria akceptacji, macierz, właściciel decyzji, wyjątki i eskalacja.": "Acceptance criteria, matrix, decision owner, exceptions and escalation.",
-  "Normy, przepisy, wymagania klienta, wymagania kolejowe lub sektorowe.": "Standards, regulations, customer requirements, railway or sector requirements.",
+  "Normy, przepisy, wymagania klienta, wymagania sektorowe lub kontraktowe.": "Standards, regulations, customer requirements, sector or contractual requirements.",
   "Warunki akceptacji, wyjątki, ryzyka świadomie zaakceptowane, wymagane działania.": "Acceptance conditions, exceptions, consciously accepted risks and required actions.",
   "imię, nazwisko, rola": "name, surname, role",
   "Brak opisu SUC.": "No SUC description.",
@@ -525,7 +529,7 @@ const VIEW_FALLBACKS = {
   },
   "cra-components": {
     title: "Komponenty CRA",
-    description: "Sklasyfikuj komponenty TCMS/PIS jako produkty z elementami cyfrowymi."
+    description: "Sklasyfikuj komponenty produktu jako produkty z elementami cyfrowymi."
   },
   "cra-requirements": {
     title: "CRA Annex I",
@@ -646,20 +650,22 @@ function translateAttributes(root) {
 }
 
 function translateInlineText(value) {
-  let result = String(value ?? "");
-  const trimmed = result.trim();
+  const source = String(value ?? "");
+  const trimmed = source.trim();
   const direct = UI_TRANSLATIONS[trimmed];
   if (direct) {
-    return result.replace(trimmed, direct);
+    return source.replace(trimmed, direct);
   }
 
-  const entries = Object.entries(UI_TRANSLATIONS).sort((a, b) => b[0].length - a[0].length);
-  entries.forEach(([pl, en]) => {
-    if (pl && result.includes(pl)) {
-      result = result.split(pl).join(en);
-    }
-  });
-  return result;
+  const keys = Object.keys(UI_TRANSLATIONS)
+    .filter(Boolean)
+    .sort((a, b) => b.length - a.length);
+  const pattern = new RegExp(keys.map(escapeRegExp).join("|"), "g");
+  return source.replace(pattern, (match) => UI_TRANSLATIONS[match] || match);
+}
+
+function escapeRegExp(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
 function createDefaultState() {
@@ -853,7 +859,7 @@ function normaliseComponent(component) {
   return {
     id: component?.id || createId(),
     name: component?.name || "",
-    systemArea: component?.systemArea || "TCMS",
+    systemArea: component?.systemArea || "Control system",
     componentType: component?.componentType || "Hardware",
     version: component?.version || "",
     supplier: component?.supplier || "",
@@ -1668,7 +1674,7 @@ function renderComponents() {
   const list = document.getElementById("componentsList");
   document.getElementById("componentCount").textContent = String(state.components.length);
   if (!state.components.length) {
-    list.innerHTML = '<div class="empty-state">Brak komponentów CRA. Dodaj elementy TCMS, PIS, sieci pokładowej, remote service i narzędzia utrzymania.</div>';
+    list.innerHTML = '<div class="empty-state">Brak komponentów CRA. Dodaj komponenty produktu, sieci, remote service, aplikacje i narzędzia utrzymania.</div>';
     return;
   }
   list.innerHTML = state.components.map((component, index) => componentCard(component, index)).join("");
@@ -2044,7 +2050,7 @@ function renderReport() {
     scenarioMetricHtml("Strefy", state.zones.length, "ZCR 3"),
     scenarioMetricHtml("Conduits", state.conduits.length, "ZCR 3"),
     scenarioMetricHtml("Scenariusze", state.scenarios.length, "ZCR 5"),
-    scenarioMetricHtml("Komponenty CRA", state.components.length, "TCMS/PIS"),
+    scenarioMetricHtml("Komponenty CRA", state.components.length, "zakres produktu"),
     scenarioMetricHtml("SBOM", state.sbom.length, "składniki"),
     scenarioMetricHtml("Podatności", state.vulnerabilities.length, reportableItems ? `${reportableItems} do oceny raportowania` : "brak raportowalnych"),
     scenarioMetricHtml("ZCR gotowe", `${checklistDone}/${state.checklist.length}`, aboveThreshold ? `${aboveThreshold} ryzyk ponad próg` : "brak przekroczeń"),
@@ -2150,13 +2156,23 @@ function updateCompletion() {
   document.getElementById("completionPercent").textContent = `${percent}%`;
   document.getElementById("completionBar").style.width = `${percent}%`;
   const updated = state.updatedAt ? `Ostatni zapis: ${formatDateTime(state.updatedAt)}` : "Autosave aktywny.";
-  document.getElementById("projectUpdatedAt").textContent = updated;
+  setLocalizedText(document.getElementById("projectUpdatedAt"), updated);
 }
 
 function updateSaveStatus() {
   const saveStatus = document.getElementById("saveStatus");
   if (!saveStatus) return;
-  saveStatus.textContent = state.updatedAt ? `Zapisano lokalnie ${formatDateTime(state.updatedAt)}.` : "Stan będzie zapisany automatycznie.";
+  const privacyNotice = "Dane są przechowywane wyłącznie lokalnie w Twojej przeglądarce i nie są wysyłane ani zapisywane na serwerze aplikacji.";
+  const status = state.updatedAt
+    ? `Ostatni zapis lokalny: ${formatDateTime(state.updatedAt)}. ${privacyNotice}`
+    : `Stan będzie zapisany automatycznie. ${privacyNotice}`;
+  setLocalizedText(saveStatus, status);
+}
+
+function setLocalizedText(element, source) {
+  if (!element) return;
+  element.textContent = currentLanguage === "en" ? translateInlineText(source) : source;
+  if (element.firstChild) element.firstChild.__i18nSource = source;
 }
 
 function markChecklist(code, status) {
@@ -2250,7 +2266,7 @@ function docBody() {
     <h2>5. Rejestr scenariuszy ryzyka</h2>
     ${scenariosTable()}
 
-    <h2>6. CRA: klasyfikacja komponentów TCMS/PIS</h2>
+    <h2>6. CRA: klasyfikacja komponentów produktu</h2>
     ${componentsTable()}
 
     <h2>7. CRA: macierz Annex I i dokumentacja produktu</h2>
@@ -2554,12 +2570,12 @@ function slOptions(selected) {
 
 function systemAreaOptions(selected) {
   return selectOptions([
-    ["TCMS", "TCMS"],
-    ["PIS", "Informacja pasażerska"],
-    ["Network", "Sieć pokładowa"],
-    ["Remote", "Remote service / train-to-ground"],
+    ["Control system", "System sterowania"],
+    ["HMI", "HMI / aplikacja użytkownika"],
+    ["Network", "Sieć systemowa"],
+    ["Remote", "Remote service / external connectivity"],
     ["Maintenance", "Utrzymanie / diagnostyka"],
-    ["Passenger", "Passenger Wi-Fi / usługi pasażerskie"],
+    ["User services", "Usługi użytkownika"],
     ["Other", "Inny"]
   ], selected);
 }

@@ -34,18 +34,17 @@
           <button class="nav-button" type="button" data-view="report">Raport</button>
         </nav>
 
-        <div class="sidebar-actions" aria-label="Dane projektu">
-          <button class="sidebar-danger-button" type="button" id="clearLocalDataButton" title="Usuń wszystkie dane tej analizy z przeglądarki">Usuń wszystkie dane</button>
-          <p>Dane są zapisywane tylko lokalnie w tej przeglądarce.</p>
-        </div>
-
         <div class="status-box">
           <span class="status-label">Stan projektu</span>
           <strong id="completionPercent">0%</strong>
           <div class="progress-track" aria-hidden="true">
             <div id="completionBar" class="progress-bar"></div>
           </div>
-          <p id="saveStatus">Nie zapisano zmian.</p>
+          <p id="saveStatus">Stan będzie zapisany automatycznie. Dane są przechowywane wyłącznie lokalnie w Twojej przeglądarce i nie są wysyłane ani zapisywane na serwerze aplikacji.</p>
+        </div>
+
+        <div class="sidebar-actions" aria-label="Dane projektu">
+          <button class="sidebar-danger-button" type="button" id="clearLocalDataButton" title="Usuń wszystkie dane tej analizy z przeglądarki">Usuń wszystkie dane</button>
         </div>
       </aside>
 
@@ -81,11 +80,11 @@
           <div class="form-grid two">
             <label class="field">
               <span>Nazwa analizy</span>
-              <input type="text" data-bind="meta.title" placeholder="np. Analiza ryzyka systemu TCMS">
+              <input type="text" data-bind="meta.title" placeholder="np. Analiza ryzyka systemu sterowania">
             </label>
             <label class="field">
               <span>Organizacja / projekt</span>
-              <input type="text" data-bind="meta.organization" placeholder="np. Stadler">
+              <input type="text" data-bind="meta.organization" placeholder="np. organizacja / projekt">
             </label>
             <label class="field">
               <span>Właściciel aktywów</span>
@@ -322,10 +321,10 @@
           <div id="scenariosList" class="scenario-list"></div>
         </section>
 
-        <section class="view" id="view-cra-components" data-title="Komponenty CRA" data-description="Sklasyfikuj komponenty TCMS/PIS jako produkty z elementami cyfrowymi, określ rolę operatora, kategorię CRA, support period i procedurę oceny zgodności.">
+        <section class="view" id="view-cra-components" data-title="Komponenty CRA" data-description="Sklasyfikuj komponenty produktu jako produkty z elementami cyfrowymi, określ rolę operatora, kategorię CRA, support period i procedurę oceny zgodności.">
           <div class="section-heading">
             <div>
-              <h3>CRA: klasyfikacja komponentów TCMS/PIS</h3>
+              <h3>CRA: klasyfikacja komponentów produktu</h3>
               <p>Rejestr obejmuje komponenty sprzętowe, software, firmware i usługi remote data processing związane z produktem.</p>
             </div>
           </div>
@@ -334,17 +333,17 @@
             <div class="form-grid four">
               <label class="field">
                 <span>Nazwa komponentu</span>
-                <input name="name" type="text" required placeholder="np. PIS Controller, TCMS Gateway">
+                <input name="name" type="text" required placeholder="np. kontroler, gateway, aplikacja HMI">
               </label>
               <label class="field">
-                <span>Obszar pojazdu</span>
+                <span>Obszar systemu</span>
                 <select name="systemArea">
-                  <option value="TCMS">TCMS</option>
-                  <option value="PIS">Informacja pasażerska</option>
-                  <option value="Network">Sieć pokładowa</option>
-                  <option value="Remote">Remote service / train-to-ground</option>
+                  <option value="Control system">System sterowania</option>
+                  <option value="HMI">HMI / aplikacja użytkownika</option>
+                  <option value="Network">Sieć systemowa</option>
+                  <option value="Remote">Remote service / external connectivity</option>
                   <option value="Maintenance">Utrzymanie / diagnostyka</option>
-                  <option value="Passenger">Passenger Wi-Fi / usługi pasażerskie</option>
+                  <option value="User services">Usługi użytkownika</option>
                   <option value="Other">Inny</option>
                 </select>
               </label>
@@ -424,7 +423,7 @@
             <div class="form-grid three">
               <label class="field">
                 <span>Zastosowanie i funkcje</span>
-                <textarea name="intendedUse" rows="3" placeholder="Funkcja w pojeździe, tryby pracy, przewidywane użycie."></textarea>
+                <textarea name="intendedUse" rows="3" placeholder="Funkcja systemu, tryby pracy, przewidywane użycie."></textarea>
               </label>
               <label class="field">
                 <span>Interfejsy i połączenia</span>
@@ -456,7 +455,7 @@
           <div class="form-grid two">
             <label class="field">
               <span>Normy i specyfikacje użyte jako dowód</span>
-              <textarea data-bind="cra.standardsApplied" rows="5" placeholder="np. IEC 62443-4-1, IEC 62443-4-2, IEC 62443-3-3, EN 50701, EN 50159, normy zharmonizowane CRA gdy dostępne."></textarea>
+              <textarea data-bind="cra.standardsApplied" rows="5" placeholder="np. IEC 62443-4-1, IEC 62443-4-2, IEC 62443-3-3, ISO/IEC 27001, normy zharmonizowane CRA gdy dostępne."></textarea>
             </label>
             <label class="field">
               <span>Instrukcje bezpiecznej instalacji i eksploatacji</span>
@@ -483,7 +482,7 @@
           <div class="section-heading">
             <div>
               <h3>CRA: SBOM i komponenty third-party</h3>
-              <p>Rejestr można prowadzić per produkt, firmware, aplikację PIS, gateway, router lub narzędzie serwisowe.</p>
+              <p>Rejestr można prowadzić per produkt, firmware, aplikację, gateway, router lub narzędzie serwisowe.</p>
             </div>
           </div>
 
@@ -537,7 +536,7 @@
             </div>
             <label class="field">
               <span>Notatki / uzasadnienie</span>
-              <textarea name="notes" rows="3" placeholder="CVE, kompensacje, powód zamrożenia wersji, ograniczenia środowiska kolejowego."></textarea>
+              <textarea name="notes" rows="3" placeholder="CVE, kompensacje, powód zamrożenia wersji, ograniczenia środowiska operacyjnego."></textarea>
             </label>
             <button class="primary-button" type="submit">Dodaj składnik SBOM</button>
           </form>
@@ -625,7 +624,7 @@
             <div class="form-grid two">
               <label class="field">
                 <span>Opis wpływu</span>
-                <textarea name="impact" rows="3" placeholder="Wpływ na produkt, pojazd, operatora, pasażerów, dostępność, integralność lub poufność."></textarea>
+                <textarea name="impact" rows="3" placeholder="Wpływ na produkt, użytkowników, operatora, dostępność, integralność lub poufność."></textarea>
               </label>
               <label class="field">
                 <span>Mitigacja / komunikacja</span>
@@ -744,7 +743,7 @@
             </label>
             <label class="field">
               <span>Wymagania regulacyjne i kontraktowe</span>
-              <textarea data-bind="docs.regulatory" rows="6" placeholder="Normy, przepisy, wymagania klienta, wymagania kolejowe lub sektorowe."></textarea>
+              <textarea data-bind="docs.regulatory" rows="6" placeholder="Normy, przepisy, wymagania klienta, wymagania sektorowe lub kontraktowe."></textarea>
             </label>
           </div>
 

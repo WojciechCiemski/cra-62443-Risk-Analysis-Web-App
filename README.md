@@ -1,6 +1,6 @@
 # CRA / IEC 62443-3-2 Risk Analysis Web App
 
-Static web application for preparing cybersecurity risk analyses for TCMS, on-board network and passenger information components using the IEC 62443-3-2 workflow and a CRA-oriented product compliance evidence model.
+Static web application for preparing cybersecurity risk analyses for products, systems and networked components using the IEC 62443-3-2 workflow and a CRA-oriented product compliance evidence model.
 
 ## Live Site
 
@@ -20,7 +20,7 @@ Open `index.html` in a browser. The application does not require a server, build
 - IEC 62443-3-2 workflow sections for SUC, zones, conduits, risk scenarios, requirements and approval,
 - 1-5 risk matrix with unmitigated and residual risk scoring,
 - ZCR completeness checklist,
-- CRA component classification for TCMS, passenger information and on-board network elements,
+- CRA component classification for products, systems, services and networked elements,
 - CRA Annex I requirements matrix mapped to components and evidence,
 - SBOM register for software, firmware, open-source and third-party components,
 - vulnerability and incident register with reporting status tracking,

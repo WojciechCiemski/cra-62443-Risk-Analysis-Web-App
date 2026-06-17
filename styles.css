@@ -133,12 +133,6 @@ button {
   gap: 8px;
 }
 
-.sidebar-actions p {
-  margin: 0;
-  color: #cbd3c8;
-  font-size: 12px;
-}
-
 .sidebar-danger-button {
   width: 100%;
   min-height: 40px;
