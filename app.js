@@ -9,6 +9,7 @@ const UI_TRANSLATIONS = {
   "IEC 62443-3-2": "IEC 62443-3-2",
   "IEC 62443-3-2 + CRA": "IEC 62443-3-2 + CRA",
   "Sekcje aplikacji": "Application sections",
+  "Wybór języka": "Language selector",
   "Projekt i SUC": "Project and SUC",
   "Strefy i conduits": "Zones and conduits",
   "Scenariusze ryzyka": "Risk scenarios",
@@ -34,6 +35,7 @@ const UI_TRANSLATIONS = {
   "Data analizy": "Analysis date",
   "Próg ryzyka tolerowanego": "Tolerable risk threshold",
   "Opis SUC": "SUC description",
+  "Zdefiniuj system podlegający rozważaniu, granice, punkty dostępu i kryteria ryzyka.": "Define the system under consideration, boundaries, access points and risk criteria.",
   "Granica SUC": "SUC boundary",
   "Punkty dostępu": "Access points",
   "Ryzyko początkowe i uzasadnienie": "Initial risk and rationale",
@@ -326,7 +328,110 @@ const UI_TRANSLATIONS = {
   "brak raportowalnych": "no reportable items",
   "ZCR gotowe": "ZCR done",
   "CRA gotowe": "CRA done",
-  "Annex I": "Annex I"
+  "Annex I": "Annex I",
+  "Identyfikacja i uwierzytelnianie": "Identification and authentication control",
+  "Kontrola użycia": "Use control",
+  "Integralność systemu": "System integrity",
+  "Poufność danych": "Data confidentiality",
+  "Ograniczenie przepływu danych": "Restricted data flow",
+  "Terminowa reakcja na zdarzenia": "Timely response to events",
+  "Dostępność zasobów": "Resource availability",
+  "Zidentyfikuj granice SUC i punkty dostępu": "Identify the SUC boundaries and access points",
+  "Wykonaj początkową ocenę ryzyka cyberbezpieczeństwa": "Perform the initial cybersecurity risk assessment",
+  "Ustanów strefy i conduits": "Establish zones and conduits",
+  "Rozdziel aktywa biznesowe i IACS": "Separate business and IACS assets",
+  "Rozdziel aktywa związane z safety": "Separate safety-related assets",
+  "Rozdziel urządzenia tymczasowo podłączane": "Separate temporarily connected devices",
+  "Rozdziel urządzenia bezprzewodowe": "Separate wireless devices",
+  "Rozdziel urządzenia połączone przez sieci zewnętrzne": "Separate devices connected through external networks",
+  "Porównaj ryzyko początkowe z ryzykiem tolerowanym": "Compare initial risk with tolerable risk",
+  "Zidentyfikuj zagrożenia": "Identify threats",
+  "Zidentyfikuj podatności": "Identify vulnerabilities",
+  "Określ konsekwencje i wpływ": "Determine consequence and impact",
+  "Określ prawdopodobieństwo bez mitygacji": "Determine unmitigated likelihood",
+  "Określ ryzyko bez mitygacji": "Determine unmitigated risk",
+  "Określ SL-T": "Determine SL-T",
+  "Porównaj ryzyko bez mitygacji z ryzykiem tolerowanym": "Compare unmitigated risk with tolerable risk",
+  "Zidentyfikuj i oceń istniejące zabezpieczenia": "Identify and evaluate existing countermeasures",
+  "Ponownie oceń prawdopodobieństwo i wpływ": "Re-evaluate likelihood and impact",
+  "Określ ryzyko rezydualne": "Determine residual risk",
+  "Porównaj ryzyko rezydualne z ryzykiem tolerowanym": "Compare residual risk with tolerable risk",
+  "Zidentyfikuj dodatkowe środki cyberbezpieczeństwa": "Identify additional cybersecurity countermeasures",
+  "Udokumentuj i zakomunikuj wyniki": "Document and communicate results",
+  "Udokumentuj specyfikację wymagań cyberbezpieczeństwa": "Document the cybersecurity requirements specification",
+  "Udokumentuj opis SUC": "Document the SUC description",
+  "Udokumentuj rysunki stref i conduits": "Document zone and conduit drawings",
+  "Udokumentuj charakterystyki stref i conduits": "Document zone and conduit characteristics",
+  "Udokumentuj założenia środowiska operacyjnego": "Document operating environment assumptions",
+  "Udokumentuj środowisko zagrożeń": "Document the threat environment",
+  "Udokumentuj polityki organizacyjne": "Document organisational security policies",
+  "Udokumentuj ryzyko tolerowane": "Document tolerable risk",
+  "Udokumentuj wymagania regulacyjne": "Document regulatory requirements",
+  "Uzyskaj zatwierdzenie właściciela aktywów": "Obtain asset owner approval",
+  "Bezpieczna konfiguracja domyślna": "Secure default configuration",
+  "Kontrola dostępu i tożsamości": "Access control and identity",
+  "Integralność danych i konfiguracji": "Data and configuration integrity",
+  "Minimalizacja danych i powierzchni ataku": "Data and attack surface minimisation",
+  "Odporność i dostępność": "Resilience and availability",
+  "Logowanie i monitoring": "Logging and monitoring",
+  "Bezpieczne aktualizacje": "Secure updates",
+  "Bezpieczne usuwanie i wycofanie": "Secure deletion and decommissioning",
+  "Proces obsługi podatności": "Vulnerability handling process",
+  "SBOM i komponenty third-party": "SBOM and third-party components",
+  "Testy bezpieczeństwa": "Security testing",
+  "Raportowanie aktywnie wykorzystywanych podatności i poważnych incydentów": "Reporting actively exploited vulnerabilities and severe incidents",
+  "Reportowanie aktywnie wykorzystywanych podatności i poważnych incydentów": "Reporting actively exploited vulnerabilities and severe incidents",
+  "Produkt zaprojektowany, rozwijany i produkowany z poziomem cyberbezpieczeństwa adekwatnym do ryzyka.": "The product is designed, developed and produced with a cybersecurity level appropriate to the risk.",
+  "Domyślne ustawienia minimalizują ryzyko, bez słabych haseł i z możliwością bezpiecznego resetu.": "Default settings minimise risk, avoid weak passwords and support secure reset.",
+  "Ochrona przed nieautoryzowanym dostępem przez uwierzytelnianie, autoryzację i zarządzanie tożsamością.": "Protection against unauthorised access through authentication, authorisation and identity management.",
+  "Dane przetwarzane, przechowywane i transmitowane są chronione adekwatnie do ryzyka.": "Processed, stored and transmitted data is protected appropriately to the risk.",
+  "Produkt chroni dane, polecenia, konfigurację i firmware przed nieuprawnioną zmianą.": "The product protects data, commands, configuration and firmware against unauthorised modification.",
+  "Produkt ogranicza zbędne funkcje, porty, usługi, uprawnienia i dane do niezbędnego minimum.": "The product limits unnecessary functions, ports, services, privileges and data to the necessary minimum.",
+  "Produkt ogranicza skutki DoS, wyczerpania zasobów, błędów wejścia i utraty zasilania lub łączności.": "The product limits the effects of DoS, resource exhaustion, input errors and loss of power or connectivity.",
+  "Produkt wspiera wykrywanie, rejestrowanie i analizę zdarzeń bezpieczeństwa adekwatnie do funkcji.": "The product supports detection, logging and analysis of security events appropriate to its functions.",
+  "Aktualizacje bezpieczeństwa są dostarczane, weryfikowane, możliwe do wdrożenia i oddzielone od zmian funkcjonalnych tam, gdzie to właściwe.": "Security updates are provided, verified, deployable and separated from functional changes where appropriate.",
+  "Produkt pozwala usunąć dane, sekrety i konfigurację przed przekazaniem, serwisem lub końcem życia.": "The product allows data, secrets and configuration to be removed before transfer, service or end of life.",
+  "Producent utrzymuje proces identyfikacji, triage, korekty i publikacji informacji o podatnościach.": "The manufacturer maintains a process for identification, triage, remediation and publication of vulnerability information.",
+  "Składniki software/firmware oraz zależności third-party są identyfikowane, utrzymywane i możliwe do powiązania z podatnościami.": "Software/firmware components and third-party dependencies are identified, maintained and linkable to vulnerabilities.",
+  "Produkt i jego komponenty są regularnie testowane pod kątem podatności i odporności na znane klasy ataków.": "The product and its components are regularly tested for vulnerabilities and resistance to known attack classes.",
+  "Dostępny jest kanał zgłoszeń, zasady koordynacji, komunikacja z reporterami i klientami.": "A reporting channel, coordination rules and communication with reporters and customers are available.",
+  "Proces wspiera terminy 24h/72h, final report oraz komunikację przez właściwe kanały CRA.": "The process supports 24h/72h timelines, final reports and communication through the relevant CRA channels.",
+  "Podziel SUC na strefy i połączenia, rozdziel aktywa biznesowe, IACS, safety, bezprzewodowe, tymczasowe i zewnętrzne.": "Partition the SUC into zones and connections, separating business, IACS, safety, wireless, temporary and external assets.",
+  "Zidentyfikuj zagrożenia, podatności, wpływ, prawdopodobieństwo, SL-T, istniejące zabezpieczenia i ryzyko rezydualne.": "Identify threats, vulnerabilities, impact, likelihood, SL-T, existing controls and residual risk.",
+  "Sklasyfikuj komponenty TCMS/PIS jako produkty z elementami cyfrowymi, określ rolę operatora, kategorię CRA, support period i procedurę oceny zgodności.": "Classify TCMS/PIS components as products with digital elements and define the operator role, CRA category, support period and conformity assessment procedure.",
+  "Zmapuj wymagania CRA Annex I na komponenty, ryzyka, środki techniczne i dowody zgodności.": "Map CRA Annex I requirements to components, risks, technical measures and conformity evidence.",
+  "Zbierz komponenty software, firmware, biblioteki open-source i third-party wraz z wersją, licencją, CVE i statusem aktualizacji.": "Collect software, firmware, open-source and third-party components with version, licence, CVE and update status.",
+  "Prowadź rejestr podatności i incydentów pod CRA z terminami 24h/72h, statusem poprawki i komunikacją.": "Maintain a CRA vulnerability and incident register with 24h/72h deadlines, patch status and communication.",
+  "Połącz ryzyka, komponenty, wymagania CRA/62443, środki techniczne, testy i dowody do pakietu audytowego.": "Link risks, components, CRA/62443 requirements, technical measures, tests and evidence into an audit package.",
+  "Udokumentuj wymagania cyberbezpieczeństwa, założenia, polityki, tolerancję ryzyka i wymagania regulacyjne.": "Document cybersecurity requirements, assumptions, policies, risk tolerance and regulatory requirements.",
+  "Zarejestruj decyzję właściciela aktywów oraz pozostałe ryzyka wymagające akceptacji lub dalszego planu.": "Record the asset owner decision and remaining risks requiring acceptance or further action.",
+  "Sprawdź kompletność i wygeneruj raport Word DOC lub kopię danych JSON.": "Check completeness and generate a Word DOC report or JSON data copy.",
+  "Wymagania wynikające z ryzyka, SL-T, polityk, architektury i kontraktu.": "Requirements derived from risk, SL-T, policies, architecture and contract.",
+  "Nazwy diagramów, linki, numery dokumentów, wersje.": "Diagram names, links, document numbers and versions.",
+  "Zaufanie, krytyczność, poziomy SL-T, aktywa, przepływy, założenia separacji.": "Trust, criticality, SL-T levels, assets, flows and separation assumptions.",
+  "Założenia dotyczące eksploatacji, utrzymania, personelu, dostawców i fizycznego środowiska pracy.": "Assumptions about operation, maintenance, personnel, suppliers and the physical operating environment.",
+  "Profil atakujących, dostępne wektory, ekspozycja zewnętrzna, historia incydentów.": "Threat actor profile, available vectors, external exposure and incident history.",
+  "Polityki dostępu, zdalnego serwisu, haseł, kopii zapasowych, patchowania, logowania.": "Policies for access, remote service, passwords, backups, patching and logging.",
+  "Kryteria akceptacji, macierz, właściciel decyzji, wyjątki i eskalacja.": "Acceptance criteria, matrix, decision owner, exceptions and escalation.",
+  "Normy, przepisy, wymagania klienta, wymagania kolejowe lub sektorowe.": "Standards, regulations, customer requirements, railway or sector requirements.",
+  "Warunki akceptacji, wyjątki, ryzyka świadomie zaakceptowane, wymagane działania.": "Acceptance conditions, exceptions, consciously accepted risks and required actions.",
+  "imię, nazwisko, rola": "name, surname, role",
+  "Brak opisu SUC.": "No SUC description.",
+  "Brak opisu granicy.": "No boundary description.",
+  "brak wersji": "no version",
+  "0 - nieokreślony": "0 - unspecified",
+  "Nazwa": "Name",
+  "Usuń": "Delete",
+  "Środki ochronne": "Protection measures",
+  "Wpływ przed": "Impact before",
+  "Wpływ po": "Impact after",
+  "Prawdop. przed": "Likelihood before",
+  "Prawdop. po": "Likelihood after",
+  "Prawd. \\ Wpływ": "Likelihood \\ Impact",
+  "Próg tolerowany": "Tolerable threshold",
+  "Ponad próg": "Above threshold",
+  "Działania": "Actions",
+  "Scenariusze": "Scenarios"
 };
 
 const FR_LEVELS = [
@@ -1637,8 +1742,8 @@ function renderCraRequirements() {
     <div class="checklist-row cra-row" data-index="${index}">
       <div class="checklist-code">${escapeHtml(item.code)}</div>
       <div>
-        <div class="checklist-title">${escapeHtml(item.title)}</div>
-        <div class="record-title"><p>${escapeHtml(item.description)}</p></div>
+        <div class="checklist-title">${escapeHtml(trText(item.title))}</div>
+        <div class="record-title"><p>${escapeHtml(trText(item.description))}</p></div>
       </div>
       <select data-cra-req-field="status">${statusOptions(item.status)}</select>
       <select data-cra-req-field="componentId">${componentSelectOptions(item.componentId, "Wszystkie / ogólne")}</select>
@@ -2300,7 +2405,7 @@ function craRequirementsTable() {
         ${state.craRequirements.map((item) => `
           <tr>
             <td>${escapeHtml(item.code)}</td>
-            <td>${escapeHtml(item.title)}<br>${escapeHtml(item.description)}</td>
+            <td>${escapeHtml(trText(item.title))}<br>${escapeHtml(trText(item.description))}</td>
             <td>${escapeHtml(statusLabel(item.status))}</td>
             <td>${escapeHtml(componentLabel(item.componentId))}</td>
             <td>${nl2br(item.evidence || "-")}</td>
@@ -2571,7 +2676,7 @@ function scenarioSelectOptions(selected = "") {
 
 function requirementSelectOptions(selected = "") {
   const emptyOption = `<option value=""${!selected ? " selected" : ""}>Wybierz wymaganie</option>`;
-  return emptyOption + state.craRequirements.map((item) => `<option value="${escapeAttr(item.code)}"${item.code === selected ? " selected" : ""}>${escapeHtml(`${item.code} ${item.title}`)}</option>`).join("");
+  return emptyOption + state.craRequirements.map((item) => `<option value="${escapeAttr(item.code)}"${item.code === selected ? " selected" : ""}>${escapeHtml(`${item.code} ${trText(item.title)}`)}</option>`).join("");
 }
 
 function traceResultOptions(selected) {
