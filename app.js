@@ -5,7 +5,9 @@ let currentLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY) || "pl";
 
 const UI_TRANSLATIONS = {
   "Analiza ryzyka": "Risk analysis",
+  "Analiza ryzyka CRA / 62443": "CRA / 62443 risk analysis",
   "IEC 62443-3-2": "IEC 62443-3-2",
+  "IEC 62443-3-2 + CRA": "IEC 62443-3-2 + CRA",
   "Sekcje aplikacji": "Application sections",
   "Projekt i SUC": "Project and SUC",
   "Strefy i conduits": "Zones and conduits",
@@ -488,8 +490,8 @@ function applyLanguage(root = document.body) {
   if (!root) return;
   document.documentElement.lang = currentLanguage;
   document.title = currentLanguage === "en"
-    ? "IEC 62443-3-2 - risk analysis"
-    : "IEC 62443-3-2 - analiza ryzyka";
+    ? "CRA / IEC 62443-3-2 - risk analysis"
+    : "CRA / IEC 62443-3-2 - analiza ryzyka";
 
   document.querySelectorAll("[data-lang-switch]").forEach((button) => {
     button.classList.toggle("active", button.dataset.langSwitch === currentLanguage);
