@@ -1,4 +1,4 @@
-# CRA / IEC 62443-3-2 Risk Analysis Web App
+# CRA / IEC 62443 Risk Workbench Community Edition
 
 Static web application for preparing cybersecurity risk analyses for products, systems and networked components using the IEC 62443-3-2 workflow and a CRA-oriented product compliance evidence model.
 
@@ -6,7 +6,7 @@ Static web application for preparing cybersecurity risk analyses for products, s
 
 After GitHub Pages is enabled, the application is available at:
 
-https://wojciechciemski.github.io/cra-62443-Risk-Analysis-Web-App/
+https://wojciechciemski.github.io/CRA-62443-Risk-Workbench-Community-Edition/
 
 ## Local Usage
 
